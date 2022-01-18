@@ -1,69 +1,24 @@
 # 18 NoSQL: Social Network API
-
-MongoDB is a popular choice for many social networks due to its speed with large amounts of data and flexibility with unstructured data. Over the last part of this course, you’ll use several of the technologies that social networking platforms use in their full-stack applications. Because the foundation of these applications is data, it’s important that you understand how to build and structure the API first.
-
-Your challenge is to build an API for a social network using Express.js for routing, a MongoDB database, and the Mongoose ODM. In addition to using the [Express](https://www.npmjs.com/package/express) and [Mongoose](https://www.npmjs.com/package/mongoose) packages, you may also optionally use a JavaScript date library of your choice or the native JavaScript `Date` object to format timestamps.
-
-Because this application won’t be deployed, you’ll also need to create a walkthrough video that demonstrates its functionality and all of the following acceptance criteria being met. You’ll need to submit a link to the video and add it to the README of your project.
-
+This is an API that uses technology that is popular with many social media networks due to its speed with large amounts of data, and its flexibility with unstructured data. For the database, I will not be using MySQL, instead, MongoDB will be used.
 
 ## User Story
+Aa a social media startup, I want an API for my social network that uses a NoSQL database so that  my website can handle large amounts of unstructured data.
 
-```md
-AS A social media startup
-I WANT an API for my social network that uses a NoSQL database
-SO THAT my website can handle large amounts of unstructured data
-```
+## User Experience
+Given a social network API, when I enter the command to invoke the application, then my server is started and the Mongoose models are synced to the MongoDB database.
+When I open API GET routes in Insomnia Core for users and thoughts, then the data for each of these routes is displayed in a formatted JSON.
+When I test API POST, PUT, and DELETE routes in Insomnia Core, then I am able to successfully create, update, and delete users and thoughts in my database.
+When I test API POST and DELETE routes in Insomnia Core, then I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list.
 
+## Datbase Models
+The database contains the following models, including the requirements listed for each listed below:
 
-## Acceptance Criteria
+1. Create/update/delete user
+2. Create/delete friends
+3. Create/update/delete thoughts
+4. Create/delete reactions
 
-```md
-GIVEN a social network API
-WHEN I enter the command to invoke the application
-THEN my server is started and the Mongoose models are synced to the MongoDB database
-WHEN I open API GET routes in Insomnia Core for users and thoughts
-THEN the data for each of these routes is displayed in a formatted JSON
-WHEN I test API POST, PUT, and DELETE routes in Insomnia Core
-THEN I am able to successfully create, update, and delete users and thoughts in my database
-WHEN I test API POST and DELETE routes in Insomnia Core
-THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
-```
-
-
-## Mock-Up
-
-The following animations show examples of the application's API routes being tested in Insomnia Core.
-
-The first animation shows GET routes to return all users and all thoughts being tested in Insomnia Core:
-
-![Homework Demo 01](./Assets/18-nosql-homework-demo-01.gif)
-
-The second animation shows GET routes to return a single user and a single thought being tested in Insomnia Core:
-
-![Homework Demo 02](./Assets/18-nosql-homework-demo-02.gif)
-
-The third animation shows the POST, PUT, and DELETE routes for users being tested in Insomnia Core:
-
-![Homework Demo 03](./Assets/18-nosql-homework-demo-03.gif)
-
-Your walkthrough video should also show the POST, PUT, and DELETE routes for thoughts being tested in Insomnia Core.
-
-The final animation shows the POST and DELETE routes for a user’s friend list being tested in Insomnia Core:
-
-![Homework Demo 04](./Assets/18-nosql-homework-demo-04.gif)
-
-Your walkthrough video should also show the POST and DELETE routes for reactions to thoughts being tested in Insomnia Core.
-
-
-## Getting Started
-
-Use the following guidelines to set up your models and API routes:
-
-### Models
-
-**User**
-
+## User
 * `username`
     * String
     * Unique
@@ -137,7 +92,6 @@ Create a virtual called `reactionCount` that retrieves the length of the thought
 
 This will not be a model, but rather used as the `reaction` field's subdocument schema in the `Thought` model.
 
-
 ### API Routes
 
 **`/api/users`**
@@ -201,13 +155,9 @@ This will not be a model, but rather used as the `reaction` field's subdocument 
 
 * `DELETE` to pull and remove a reaction by the reaction's `reactionId` value
 
-## Review
+## Walkthrough Video Link:
 
-You are required to submit BOTH of the following for review:
 
-* A walkthrough video demonstrating the functionality of the application and all of the acceptance criteria being met.
+## Github Repository Link:
+https://github.com/rawc72/Challenge_No_18.git
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
