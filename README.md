@@ -2,7 +2,7 @@
 This is an API that uses technology that is popular with many social media networks due to its speed with large amounts of data, and its flexibility with unstructured data. For the database, I will not be using MySQL, instead, MongoDB will be used.
 
 ## User Story
-Aa a social media startup, I want an API for my social network that uses a NoSQL database so that  my website can handle large amounts of unstructured data.
+As a social media startup, I want an API for my social network that uses a NoSQL database so that my website can handle large amounts of unstructured data.
 
 ## User Experience
 Given a social network API, when I enter the command to invoke the application, then my server is started and the Mongoose models are synced to the MongoDB database.
@@ -156,7 +156,7 @@ This will not be a model, but rather used as the `reaction` field's subdocument 
 * `DELETE` to pull and remove a reaction by the reaction's `reactionId` value
 
 ## Walkthrough Video Link:
-
+https://github.com/rawc72/Challenge_No_18/issues/1#issue-1107595718
 
 ## Github Repository Link:
 https://github.com/rawc72/Challenge_No_18.git
